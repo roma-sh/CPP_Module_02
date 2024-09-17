@@ -6,7 +6,7 @@
 /*   By: rshatra <rshatra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 19:12:01 by rshatra           #+#    #+#             */
-/*   Updated: 2024/09/10 18:50:57 by rshatra          ###   ########.fr       */
+/*   Updated: 2024/09/16 17:27:02 by rshatra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,7 @@ Fixed::Fixed()
 Fixed::Fixed(const int int_number)
 {
 	std::cout << "Int constructor called" << std::endl;
-	number = int_number * ( 1 << fract); // 5 * (1 << 8);  // 5 * 256 = 1280
-										// shifting the bites to to lift means
-										// the number will multiply 2
-										// 1 << 1 = 1 * 2
-										// 1 << 2 = 1 * 2 * 2 = 1* 2^2 shifting twic
+	number = int_number * ( 1 << fract);
 }
 
 Fixed::Fixed(const float float_number)
@@ -48,7 +44,7 @@ Fixed::Fixed(const Fixed &original)
 Fixed& Fixed::operator=(const Fixed &original)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	if (this != &original) // to prevent copying the same object
+	if (this != &original)
 		number = original.getRawBits();
 	return *this;
 }
@@ -74,7 +70,6 @@ int Fixed::toInt( void ) const
 }
 
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed) {
-    // Use the public method to access the float representation
-    os << fixed.toFloat();  // or fixed.toFloat();
-    return os;
+	os << fixed.toFloat();
+	return os;
 }

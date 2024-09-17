@@ -6,7 +6,7 @@
 /*   By: rshatra <rshatra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 17:08:15 by rshatra           #+#    #+#             */
-/*   Updated: 2024/09/10 18:27:28 by rshatra          ###   ########.fr       */
+/*   Updated: 2024/09/16 19:37:46 by rshatra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main( void ) {
 Fixed a;
 Fixed const b( 10 );
-Fixed const c( 42.42f );
+Fixed const c( 42.42f ); // f to tell the compiler to treat it as float, because by default it will take it as Double.
 Fixed const d( b );
 a = Fixed( 1234.4321f );
 

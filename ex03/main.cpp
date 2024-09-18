@@ -6,7 +6,7 @@
 /*   By: rshatra <rshatra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 21:51:23 by rshatra           #+#    #+#             */
-/*   Updated: 2024/09/18 21:47:08 by rshatra          ###   ########.fr       */
+/*   Updated: 2024/09/18 23:30:21 by rshatra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,24 @@
 
 int main()
 {
-    // Define points of the triangle
-    Point a(0.0f, 0.0f);  // Vertex A at (0, 0)
-    Point b(5.0f, 0.0f);  // Vertex B at (5, 0)
-    Point c(2.5f, 5.0f);  // Vertex C at (2.5, 5)
-
-    // Define points to test
-    Point p1(2.5f, 2.0f);  // Point clearly inside
-    Point p2(0.0f, 0.0f);    // Point on vertex A
-    Point p3(2.5f, 5.0f);  // Point on vertex C
-    Point p4(5.0f, 5.0f);    // Point clearly outside
-
-    // Test points
-    std::cout << "Point p1 is " << (bsp(a, b, c, p1) ? "inside" : "outside") << " the triangle." << std::endl;
+	// Define points of the triangle
+	Point a(0.0f, 0.0f);  // Vertex A at (0, 0)
+	Point b(5.0f, 0.0f);  // Vertex B at (5, 0)
+	Point c(2.5f, 5.0f);  // Vertex C at (2.5, 5)
+	// Define points to test
+	Point p1(2.5f, 2.0f);  // Point clearly inside
+	Point p2(0.0f, 0.0f);    // Point on vertex A
+	Point p3(2.5f, 5.0f);  // Point on vertex C
+	Point p4(5.0f, 5.0f);    // Point clearly outside
+	// Test points
+	std::cout << "Point p1 is " << (bsp(a, b, c, p1) ? "inside" : "outside") << " the triangle." << std::endl;
 	std::cout << "================================" <<std:: endl;
-    std::cout << "Point p2 is " << (bsp(a, b, c, p2) ? "inside" : "outside") << " the triangle." << std::endl;
+	std::cout << "Point p2 is " << (bsp(a, b, c, p2) ? "inside" : "outside") << " the triangle." << std::endl;
 	std::cout << "================================" <<std:: endl;
-    std::cout << "Point p3 is " << (bsp(a, b, c, p3) ? "inside" : "outside") << " the triangle." << std::endl;
+	std::cout << "Point p3 is " << (bsp(a, b, c, p3) ? "inside" : "outside") << " the triangle." << std::endl;
 	std::cout << "================================" <<std:: endl;
-    std::cout << "Point p4 is " << (bsp(a, b, c, p4) ? "inside" : "outside") << " the triangle." << std::endl;
-
-    return 0;
+	std::cout << "Point p4 is " << (bsp(a, b, c, p4) ? "inside" : "outside") << " the triangle." << std::endl;
+	return 0;
 }
 
 // int main( void ) {

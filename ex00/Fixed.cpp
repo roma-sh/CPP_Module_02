@@ -6,7 +6,7 @@
 /*   By: rshatra <rshatra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 19:12:01 by rshatra           #+#    #+#             */
-/*   Updated: 2024/09/16 17:24:53 by rshatra          ###   ########.fr       */
+/*   Updated: 2024/09/18 22:23:32 by rshatra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@ Fixed& Fixed::operator=(const Fixed &original)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &original) // to prevent copying the same object
+						// some objects have dynamically allocated elements and in the asigning process we will free this memory and
+						// allocate a new one to copy the new data, if we are copying the same object we will free the meomry and wn't
+						//be able to copy it again(they are lost 4ever)
 		number = original.getRawBits();
 	return *this;
 }

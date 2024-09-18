@@ -6,7 +6,7 @@
 /*   By: rshatra <rshatra@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 21:51:23 by rshatra           #+#    #+#             */
-/*   Updated: 2024/09/16 23:03:30 by rshatra          ###   ########.fr       */
+/*   Updated: 2024/09/17 20:02:40 by rshatra          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,14 +53,20 @@ int main( void ) {
 // std::cout<<"after the pre increament: " << increment.toFloat()<<std::endl;
 
 
-Fixed a;
-Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-std::cout << a << std::endl;
-std::cout << ++a << std::endl;
-std::cout << a << std::endl;
-std::cout << a++ << std::endl;
-std::cout << a << std::endl;
-std::cout << b << std::endl;
-std::cout << Fixed::max( a, b ) << std::endl;
+// Fixed a;
+// Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+// std::cout << a << std::endl;
+// std::cout << ++a << std::endl;
+// std::cout << a << std::endl;
+// std::cout << a++ << std::endl;
+// std::cout << a << std::endl;
+// std::cout << b << std::endl;
+// std::cout << Fixed::max( a, b ) << std::endl;
+
+Fixed a(3.5f);
+Fixed b(2.25f);
+Fixed c(1.1f);
+Fixed d = ((a - b) * (a + b)) - ((c - b) * (c + b));
+std::cout<< "the number is :" << d <<std::endl;
 return 0;
 }
